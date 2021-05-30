@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:remake_spotify/spotify.dart';
+import 'package:remake_spotify/body_home.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "Gotham"),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: SpotifyHome(),
+      home: BodyHome(),
     );
   }
 }

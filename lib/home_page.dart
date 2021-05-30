@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class SpotifyHome extends StatelessWidget {
   //WIDGET THUMBNAIL RECENTLY PLAYED
@@ -83,15 +82,18 @@ class SpotifyHome extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.transparent,
         body: Stack(
           children: [
             //BACKGROUND
+            /*
             SvgPicture.asset(
               "assets/svg/flutter_spotify_bg.svg",
               fit: BoxFit.contain,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
             ),
+            */
             //CONTENT
             ListView(
               children: [
@@ -740,6 +742,7 @@ class SpotifyHome extends StatelessWidget {
                 ),
               ],
             ),
+            /*
             Align(
               alignment: Alignment(0, 1),
               child: Container(
@@ -837,6 +840,7 @@ class SpotifyHome extends StatelessWidget {
                 ),
               ),
             ),
+           */ //widget bottom bar custom
           ],
         ),
       ),
