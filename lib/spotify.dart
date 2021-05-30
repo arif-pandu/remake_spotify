@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Spotify extends StatelessWidget {
+class SpotifyHome extends StatelessWidget {
   //WIDGET THUMBNAIL RECENTLY PLAYED
   Widget buildSmallerThumbnail(String imageURLRecent) {
     return Container(
@@ -127,42 +127,54 @@ class Spotify extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //RECENT PLAYLIST
+                    //RECENT PLAYLIST + GOOD AFTERNOON
                     Container(
                       child: Column(children: [
                         //FIRST LINE OF THUMBNAIL
                         Container(
-                          height: MediaQuery.of(context).size.height / 12,
+                          height: MediaQuery.of(context).size.height / 14,
                           child: Row(
                             children: [
                               //A Thumbmnail playlist
                               Flexible(
                                 flex: 1,
                                 child: Container(
-                                  //padding: EdgeInsets.only(left: 10),
                                   margin: EdgeInsets.symmetric(horizontal: 5),
                                   decoration: BoxDecoration(
-                                      color: Colors.grey,
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Colors.black87,
+                                          Colors.white10,
+                                        ],
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.topLeft,
+                                      ),
                                       borderRadius: BorderRadius.circular(5)),
                                   child: Row(
                                     children: [
-                                      Flexible(
-                                          flex: 1,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(5),
-                                                  bottomLeft:
-                                                      Radius.circular(5)),
-                                              image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/image/playlist_icon_1.png"),
-                                                  fit: BoxFit.fill),
-                                            ),
-                                          )),
-                                      Flexible(
-                                        flex: 1,
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                14,
+                                        width:
+                                            MediaQuery.of(context).size.height /
+                                                14,
+                                        //flex: 1,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.transparent,
+                                            borderRadius: BorderRadius.only(
+                                                topLeft: Radius.circular(5),
+                                                bottomLeft: Radius.circular(5)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/image/playlist_icon_1.png"),
+                                                fit: BoxFit.fitHeight),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        //flex: 1,
                                         child: Container(
                                           decoration: BoxDecoration(
                                             color: Colors.transparent,
@@ -178,8 +190,11 @@ class Spotify extends StatelessWidget {
                                                       .width /
                                                   9,
                                               child: Text(
-                                                "Kum-pulan..",
+                                                "Kum-nada",
                                                 style: TextStyle(
+                                                    fontFamily: "Gotham",
+                                                    fontStyle: FontStyle.normal,
+                                                    fontWeight: FontWeight.bold,
                                                     color: Colors.white),
                                               ),
                                             ),
@@ -190,39 +205,53 @@ class Spotify extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              //A Thumbmnail playlist
                               Flexible(
                                 flex: 1,
                                 child: Container(
                                   margin: EdgeInsets.symmetric(horizontal: 5),
                                   decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      borderRadius: BorderRadius.circular(10)),
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Colors.black87,
+                                          Colors.white10,
+                                        ],
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.topLeft,
+                                      ),
+                                      borderRadius: BorderRadius.circular(5)),
                                   child: Row(
                                     children: [
-                                      Flexible(
-                                          flex: 1,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(10),
-                                                  bottomLeft:
-                                                      Radius.circular(10)),
-                                              image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/image/playlist_icon_2.png"),
-                                                  fit: BoxFit.fill),
-                                            ),
-                                          )),
-                                      Flexible(
-                                        flex: 1,
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                14,
+                                        width:
+                                            MediaQuery.of(context).size.height /
+                                                14,
+                                        //flex: 1,
                                         child: Container(
                                           decoration: BoxDecoration(
                                             color: Colors.transparent,
                                             borderRadius: BorderRadius.only(
-                                                topRight: Radius.circular(10),
+                                                topLeft: Radius.circular(5),
+                                                bottomLeft: Radius.circular(5)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/image/playlist_icon_2.png"),
+                                                fit: BoxFit.fitHeight),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        //flex: 1,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.transparent,
+                                            borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(5),
                                                 bottomRight:
-                                                    Radius.circular(10)),
+                                                    Radius.circular(5)),
                                           ),
                                           child: Center(
                                             child: Container(
@@ -231,8 +260,11 @@ class Spotify extends StatelessWidget {
                                                       .width /
                                                   9,
                                               child: Text(
-                                                "Kum-pulan..",
+                                                "Daily mix",
                                                 style: TextStyle(
+                                                    fontFamily: "Gotham",
+                                                    fontStyle: FontStyle.normal,
+                                                    fontWeight: FontWeight.bold,
                                                     color: Colors.white),
                                               ),
                                             ),
@@ -243,39 +275,53 @@ class Spotify extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              //A Thumbmnail playlist
                               Flexible(
                                 flex: 1,
                                 child: Container(
                                   margin: EdgeInsets.symmetric(horizontal: 5),
                                   decoration: BoxDecoration(
-                                      color: Colors.grey,
-                                      borderRadius: BorderRadius.circular(10)),
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Colors.black87,
+                                          Colors.white10,
+                                        ],
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.topLeft,
+                                      ),
+                                      borderRadius: BorderRadius.circular(5)),
                                   child: Row(
                                     children: [
-                                      Flexible(
-                                          flex: 1,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(10),
-                                                  bottomLeft:
-                                                      Radius.circular(10)),
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                                                  fit: BoxFit.fill),
-                                            ),
-                                          )),
-                                      Flexible(
-                                        flex: 1,
+                                      Container(
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                14,
+                                        width:
+                                            MediaQuery.of(context).size.height /
+                                                14,
+                                        //flex: 1,
                                         child: Container(
                                           decoration: BoxDecoration(
                                             color: Colors.transparent,
                                             borderRadius: BorderRadius.only(
-                                                topRight: Radius.circular(10),
+                                                topLeft: Radius.circular(5),
+                                                bottomLeft: Radius.circular(5)),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/image/playlist_icon_2.png"),
+                                                fit: BoxFit.fitHeight),
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        //flex: 1,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.transparent,
+                                            borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(5),
                                                 bottomRight:
-                                                    Radius.circular(10)),
+                                                    Radius.circular(5)),
                                           ),
                                           child: Center(
                                             child: Container(
@@ -284,8 +330,11 @@ class Spotify extends StatelessWidget {
                                                       .width /
                                                   9,
                                               child: Text(
-                                                "Kum-pulan..",
+                                                "Daily mix 2",
                                                 style: TextStyle(
+                                                    fontFamily: "Gotham",
+                                                    fontStyle: FontStyle.normal,
+                                                    fontWeight: FontWeight.bold,
                                                     color: Colors.white),
                                               ),
                                             ),
@@ -332,7 +381,7 @@ class Spotify extends StatelessWidget {
                                         //flex: 1,
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            color: Colors.white,
+                                            color: Colors.transparent,
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(5),
                                                 bottomLeft: Radius.circular(5)),
@@ -360,7 +409,7 @@ class Spotify extends StatelessWidget {
                                                       .width /
                                                   9,
                                               child: Text(
-                                                "Kum-pulan..",
+                                                "Kum-Lagu",
                                                 style: TextStyle(
                                                     fontFamily: "Gotham",
                                                     fontStyle: FontStyle.normal,
@@ -375,6 +424,7 @@ class Spotify extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              //A Thumbmnail playlist
                               Flexible(
                                 flex: 1,
                                 child: Container(
@@ -401,7 +451,7 @@ class Spotify extends StatelessWidget {
                                         //flex: 1,
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            color: Colors.white,
+                                            color: Colors.transparent,
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(5),
                                                 bottomLeft: Radius.circular(5)),
@@ -429,7 +479,7 @@ class Spotify extends StatelessWidget {
                                                       .width /
                                                   9,
                                               child: Text(
-                                                "Kum-pulan..",
+                                                "Pop Mix",
                                                 style: TextStyle(
                                                     fontFamily: "Gotham",
                                                     fontStyle: FontStyle.normal,
@@ -444,6 +494,7 @@ class Spotify extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              //A Thumbmnail playlist
                               Flexible(
                                 flex: 1,
                                 child: Container(
@@ -451,7 +502,7 @@ class Spotify extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
-                                          Colors.black26,
+                                          Colors.black87,
                                           Colors.white10,
                                         ],
                                         begin: Alignment.bottomRight,
@@ -470,7 +521,7 @@ class Spotify extends StatelessWidget {
                                         //flex: 1,
                                         child: Container(
                                           decoration: BoxDecoration(
-                                            color: Colors.white,
+                                            color: Colors.transparent,
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(5),
                                                 bottomLeft: Radius.circular(5)),
@@ -498,7 +549,7 @@ class Spotify extends StatelessWidget {
                                                       .width /
                                                   9,
                                               child: Text(
-                                                "Kum-pulan..",
+                                                "Daily Fresh",
                                                 style: TextStyle(
                                                     fontFamily: "Gotham",
                                                     fontStyle: FontStyle.normal,
@@ -592,7 +643,7 @@ class Spotify extends StatelessWidget {
                           buildBiggerThumbnail(
                               "https://production.listennotes.com/podcasts/makna-talks-makna-talks-r2nWGO4fkaJ-eaq6UdEkN_F.1400x1400.jpg"),
                           buildBiggerThumbnail(
-                              "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
+                              "https://production.listennotes.com/podcasts/frodcast/recap-season-1-adu-keren-1nx5WB6AJrC-o07tkBnMDvJ.300x300.jpg"),
                           buildBiggerThumbnail(
                               "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
                           buildBiggerThumbnail(
@@ -705,7 +756,11 @@ class Spotify extends StatelessWidget {
                           Container(
                             height: MediaQuery.of(context).size.height / 12,
                             width: MediaQuery.of(context).size.height / 12,
-                            color: Colors.white,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/IU_-_Love_Poem_EP.png/220px-IU_-_Love_Poem_EP.png"))),
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 10),
@@ -719,15 +774,15 @@ class Spotify extends StatelessWidget {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 20),
+                                      fontSize: 18),
                                 ),
                                 Text(
                                   "IU",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 18),
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 13),
                                 ),
                               ],
                             ),

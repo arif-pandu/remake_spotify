@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: "Gotham"),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Spotify(),
+      home: SpotifyHome(),
     );
   }
 }
