@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'home_page.dart';
 import 'search_page.dart';
+import 'library_page.dart';
 
 class BodyHome extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class _BodyHomeState extends State<BodyHome> {
   final pages = [
     SpotifyHome(),
     SearchPage(),
+    LibraryPage(),
   ];
 
   @override
