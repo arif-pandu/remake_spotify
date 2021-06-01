@@ -6,6 +6,8 @@ class SpotifyHome extends StatefulWidget {
 }
 
 class _SpotifyHomeState extends State<SpotifyHome> {
+  //
+  //
   //WIDGET THUMBNAIL RECENTLY PLAYED
   Widget buildSmallerThumbnail(String imageURLRecent) {
     return Container(
@@ -90,6 +92,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
       home: Scaffold(
         backgroundColor: Colors.transparent,
         body: ListView(
+          shrinkWrap: true,
           children: [
             Column(
               children: [
