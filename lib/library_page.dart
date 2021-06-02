@@ -7,6 +7,7 @@ class LibraryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      theme: ThemeData(fontFamily: "Gotham"),
       debugShowCheckedModeBanner: false,
       home: new LibraryPageStatefull(),
     );
@@ -47,6 +48,7 @@ class _LibraryPageStatefullState extends State<LibraryPageStatefull>
     return new Scaffold(
       backgroundColor: Colors.transparent,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           //TOP SPACER
           Container(
@@ -75,74 +77,58 @@ class _LibraryPageStatefullState extends State<LibraryPageStatefull>
               ),
             ),
           ),
+          SizedBox(height: 10),
           //CONTROLLER TABBAR
-          Align(
-            alignment: Alignment(-1, 0),
-            child: Container(
-                color: Colors.transparent,
-                width: MediaQuery.of(context).size.width * 0.8 - 24,
-                child: TabBar(
-                  indicatorColor: Colors.green,
-                  controller: controller,
-                  onTap: (int index) {
-                    setState(() {
-                      selectedIndex = index;
-                      controller.animateTo(index);
-                    });
-                  },
-                  tabs: [
-                    Tab(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Playlist",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ],
+          Container(
+              width: MediaQuery.of(context).size.width * 0.7,
+              color: Colors.transparent,
+              child: TabBar(
+                indicatorSize: TabBarIndicatorSize.label,
+                indicatorColor: Colors.green,
+                controller: controller,
+                onTap: (int index) {
+                  setState(() {
+                    selectedIndex = index;
+                    controller.animateTo(index);
+                  });
+                },
+                tabs: [
+                  Container(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Playlist",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
                       ),
                     ),
-                    Tab(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Artist",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ],
+                  ),
+                  Container(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Artist",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
                       ),
                     ),
-                    Tab(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Albums",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ],
+                  ),
+                  Container(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Album",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
                       ),
                     ),
-                  ],
-                )),
-          ),
+                  ),
+                ],
+              )),
           //TABBAR VIEWER
           Container(
             color: Colors.transparent,
-            height: MediaQuery.of(context).size.height - 277,
+            height: MediaQuery.of(context).size.height - 245,
             child: TabBarView(
               controller: controller,
               children: [

@@ -9,34 +9,37 @@ class _SpotifyHomeState extends State<SpotifyHome> {
   //
   //
   //WIDGET THUMBNAIL RECENTLY PLAYED
-  Widget buildSmallerThumbnail(String imageURLRecent) {
+  Widget buildSmallerThumbnail(
+      String imageURLSmaller, String smallTitleThumbnail) {
     return Container(
-      width: 130,
+      width: 125,
       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
       child: Column(
         children: [
           Container(
-              height: 110,
-              width: 110,
+              height: 115,
+              width: 115,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
-                    image: NetworkImage(imageURLRecent),
+                    image: AssetImage(imageURLSmaller),
                   ))),
           Container(
               padding: EdgeInsets.only(top: 5),
-              width: 150,
+              width: 110,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(left: 15),
+                    width: 110,
+                    margin: EdgeInsets.only(left: 0),
                     child: Text(
-                      "Judul Lagu Kecil",
-                      textAlign: TextAlign.center,
+                      smallTitleThumbnail,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.left,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -47,7 +50,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
     );
   }
 
-  Widget buildBiggerThumbnail(String imageURLInspired) {
+  Widget buildBiggerThumbnail(String imageURLBigger) {
     return Container(
       width: 146,
       margin: EdgeInsets.all(5),
@@ -59,7 +62,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                    image: NetworkImage(imageURLInspired),
+                    image: AssetImage(imageURLBigger),
                   ))),
           Container(
               padding: EdgeInsets.only(top: 5),
@@ -107,12 +110,12 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                              margin: EdgeInsets.fromLTRB(5, 0, 0, 0),
                               child: Text(
                                 "Good afternoon",
                                 style: TextStyle(
                                     fontFamily: "Gotham",
-                                    fontSize: 28,
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white),
                               ),
@@ -164,7 +167,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                             bottomLeft: Radius.circular(5)),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                                "assets/image/playlist_icon_1.png"),
+                                                "assets/image/good_afternoon_1.png"),
                                             fit: BoxFit.fitHeight),
                                       ),
                                     ),
@@ -185,11 +188,14 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                                   .width /
                                               9,
                                           child: Text(
-                                            "Kum-nada",
+                                            "Kumpulan... \n nada",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
+                                                fontSize: 13,
                                                 fontFamily: "Gotham",
                                                 fontStyle: FontStyle.normal,
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
                                         ),
@@ -231,7 +237,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                             bottomLeft: Radius.circular(5)),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                                "assets/image/playlist_icon_2.png"),
+                                                "assets/image/good_afternoon_2.png"),
                                             fit: BoxFit.fitHeight),
                                       ),
                                     ),
@@ -252,11 +258,14 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                                   .width /
                                               9,
                                           child: Text(
-                                            "Daily mix",
+                                            "Mishary Rasyid",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
+                                                fontSize: 13,
                                                 fontFamily: "Gotham",
                                                 fontStyle: FontStyle.normal,
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
                                         ),
@@ -298,7 +307,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                             bottomLeft: Radius.circular(5)),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                                "assets/image/playlist_icon_2.png"),
+                                                "assets/image/good_afternoon_3.png"),
                                             fit: BoxFit.fitHeight),
                                       ),
                                     ),
@@ -319,11 +328,14 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                                   .width /
                                               9,
                                           child: Text(
-                                            "Daily mix 2",
+                                            "Rintik Sedu",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
+                                                fontSize: 13,
                                                 fontFamily: "Gotham",
                                                 fontStyle: FontStyle.normal,
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
                                         ),
@@ -374,7 +386,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                             bottomLeft: Radius.circular(5)),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                                "assets/image/playlist_icon_2.png"),
+                                                "assets/image/good_afternoon_4.png"),
                                             fit: BoxFit.fitHeight),
                                       ),
                                     ),
@@ -395,11 +407,14 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                                   .width /
                                               9,
                                           child: Text(
-                                            "Kum-Lagu",
+                                            "Kumpulan nada",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
+                                                fontSize: 13,
                                                 fontFamily: "Gotham",
                                                 fontStyle: FontStyle.normal,
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
                                         ),
@@ -441,7 +456,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                             bottomLeft: Radius.circular(5)),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                                "assets/image/playlist_icon_2.png"),
+                                                "assets/image/good_afternoon_5.png"),
                                             fit: BoxFit.fitHeight),
                                       ),
                                     ),
@@ -462,11 +477,14 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                                   .width /
                                               9,
                                           child: Text(
-                                            "Pop Mix",
+                                            "Pop mix",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
+                                                fontSize: 13,
                                                 fontFamily: "Gotham",
                                                 fontStyle: FontStyle.normal,
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
                                         ),
@@ -508,7 +526,7 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                             bottomLeft: Radius.circular(5)),
                                         image: DecorationImage(
                                             image: AssetImage(
-                                                "assets/image/playlist_icon_2.png"),
+                                                "assets/image/good_afternoon_6.png"),
                                             fit: BoxFit.fitHeight),
                                       ),
                                     ),
@@ -529,11 +547,14 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                                                   .width /
                                               9,
                                           child: Text(
-                                            "Daily Fresh",
+                                            "Do You See What I See",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
                                             style: TextStyle(
+                                                fontSize: 13,
                                                 fontFamily: "Gotham",
                                                 fontStyle: FontStyle.normal,
-                                                fontWeight: FontWeight.bold,
+                                                fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
                                         ),
@@ -556,18 +577,19 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 15),
+                      margin: EdgeInsets.only(left: 5),
                       child: Text(
                         "Recently played",
                         style: TextStyle(
                             fontFamily: "Gotham",
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 27),
+                            fontSize: 24),
                       ),
                     ),
                   ],
                 )),
+                SizedBox(height: 10),
                 //RECENTLY PLAYED
                 Container(
                   height: MediaQuery.of(context).size.height / 5 - 10,
@@ -577,35 +599,41 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
                       buildSmallerThumbnail(
-                          "https://1.bp.blogspot.com/-Nngt_SqPmZs/XUsZj_uy1DI/AAAAAAAAANc/IYr2bxWvx_YQ4DWnHpcvrROYSJh26WT7wCEwYBhgL/s200/https%2B_images.genius.com_86e007cc5872614096efa618034e4a73.640x640x1.jpg"),
+                          "assets/image/recently_played_1.png",
+                          "Sofia - Clairo"),
                       buildSmallerThumbnail(
-                          "https://spotlight.radiopublic.com/images/thumbnail?url=https%3A%2F%2Fqurancentral.com%2Fwp-content%2Fuploads%2Fmishary-rashid-alafasy.jpg"),
+                          "assets/image/recently_played_2.png",
+                          "Percaya Aku - Chyntia Gabriella"),
                       buildSmallerThumbnail(
-                          "https://4.bp.blogspot.com/-hAzEu0ps2G0/XatL_-diF6I/AAAAAAAAJxo/OhVwnweg8r0pX_91oIpQIOiroqNkcEJ1wCLcBGAsYHQ/s1600/Rindu%2BTak%2BBersuara%2B-%2BAlffy%2BRev%2BFeat.%2BFeby%2BPutri.webp"),
+                          "assets/image/recently_played_3.png",
+                          "Bintang Kehidupan - Nike Ardilla"),
                       buildSmallerThumbnail(
-                          "https://1.bp.blogspot.com/-Nngt_SqPmZs/XUsZj_uy1DI/AAAAAAAAANc/IYr2bxWvx_YQ4DWnHpcvrROYSJh26WT7wCEwYBhgL/s200/https%2B_images.genius.com_86e007cc5872614096efa618034e4a73.640x640x1.jpg"),
+                          "assets/image/recently_played_4.png",
+                          "Rindu Tak Bersuara - Feby Putri ft. Alvy Reff"),
                       buildSmallerThumbnail(
-                          "https://spotlight.radiopublic.com/images/thumbnail?url=https%3A%2F%2Fqurancentral.com%2Fwp-content%2Fuploads%2Fmishary-rashid-alafasy.jpg"),
+                          "assets/image/recently_played_5.png",
+                          "Rintik Sedu Podcast"),
                       buildSmallerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
+                          "assets/image/recently_played_6.png",
+                          "Dear God - Avenged Sevenfold"),
                     ],
                   ),
                 ),
                 //EDNDING RECENTLY PLAYED
-                SizedBox(height: 10),
+                SizedBox(height: 25),
                 Container(
                     child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 15),
+                      margin: EdgeInsets.only(left: 5),
                       child: Text(
                         "Get inspired",
                         style: TextStyle(
                             fontFamily: "Gotham",
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 27),
+                            fontSize: 24),
                       ),
                     ),
                   ],
@@ -618,18 +646,12 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      buildBiggerThumbnail(
-                          "https://production.listennotes.com/podcasts/frodcast/recap-season-1-adu-keren-1nx5WB6AJrC-o07tkBnMDvJ.300x300.jpg"),
-                      buildBiggerThumbnail(
-                          "https://production.listennotes.com/podcasts/makna-talks-makna-talks-r2nWGO4fkaJ-eaq6UdEkN_F.1400x1400.jpg"),
-                      buildBiggerThumbnail(
-                          "https://production.listennotes.com/podcasts/frodcast/recap-season-1-adu-keren-1nx5WB6AJrC-o07tkBnMDvJ.300x300.jpg"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_1.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_2.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_3.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_4.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_5.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_6.png"),
                     ],
                   ),
                 ),
@@ -640,13 +662,13 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 15),
+                      margin: EdgeInsets.only(left: 5),
                       child: Text(
                         "Made for you",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 27),
+                            fontSize: 24),
                       ),
                     ),
                   ],
@@ -659,18 +681,12 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_6.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_5.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_4.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_3.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_2.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_1.png"),
                     ],
                   ),
                 ),
@@ -681,13 +697,13 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 15),
+                      margin: EdgeInsets.only(left: 5),
                       child: Text(
                         "Top week song",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
-                            fontSize: 27),
+                            fontSize: 24),
                       ),
                     ),
                   ],
@@ -700,18 +716,12 @@ class _SpotifyHomeState extends State<SpotifyHome> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
-                      buildBiggerThumbnail(
-                          "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/BLACKPINK-_The_Album.png/220px-BLACKPINK-_The_Album.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_2.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_4.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_6.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_1.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_3.png"),
+                      buildBiggerThumbnail("assets/image/get_inspired_5.png"),
                     ],
                   ),
                 ),

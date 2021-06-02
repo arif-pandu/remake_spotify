@@ -103,8 +103,8 @@ class _SearchPageState extends State<SearchPage> {
               height: MediaQuery.of(context).size.height * 0.11 + 10,
               child: Row(
                 children: [
-                  searchCategory("assets/image/music_category_1.png", "Pop"),
-                  searchCategory("assets/image/music_category_2.png", "K-Pop"),
+                  searchCategory("assets/image/search_category_1.png", "Pop"),
+                  searchCategory("assets/image/search_category_2.png", "K-Pop"),
                 ],
               ),
             ),
@@ -113,9 +113,9 @@ class _SearchPageState extends State<SearchPage> {
               child: Row(
                 children: [
                   searchCategory(
-                      "assets/image/music_category_3.png", "Musik Indonesia"),
+                      "assets/image/search_category_3.png", "Musik Indonesia"),
                   searchCategory(
-                      "assets/image/music_category_4.png", "Made For You"),
+                      "assets/image/search_category_4.png", "Made For You"),
                 ],
               ),
             ),
@@ -137,10 +137,9 @@ class _SearchPageState extends State<SearchPage> {
               height: 100,
               child: Row(
                 children: [
+                  searchCategory("assets/image/search_category_5.png", "Lo-Fi"),
                   searchCategory(
-                      "assets/image/music_category_5.png", "On Repeat"),
-                  searchCategory(
-                      "assets/image/music_category_1.png", "Top Charts"),
+                      "assets/image/search_category_6.png", "On Repeats"),
                 ],
               ),
             ),
@@ -148,8 +147,8 @@ class _SearchPageState extends State<SearchPage> {
               height: 100,
               child: Row(
                 children: [
-                  searchCategory("assets/image/music_category_1.png", "Pop"),
-                  searchCategory("assets/image/music_category_1.png", "Pop"),
+                  searchCategory("assets/image/search_category_1.png", "West"),
+                  searchCategory("assets/image/search_category_3.png", "Rock"),
                 ],
               ),
             ),

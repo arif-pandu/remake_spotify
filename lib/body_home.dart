@@ -35,12 +35,12 @@ class _BodyHomeState extends State<BodyHome> {
             backgroundColor: Colors.transparent,
             body: pages[index],
             bottomNavigationBar: SizedBox(
-              height: MediaQuery.of(context).size.height / 6,
+              height: MediaQuery.of(context).size.height / 6 - 10,
               child: Container(
                 child: Column(
                   children: [
                     Container(
-                      height: MediaQuery.of(context).size.height / 12 - 1,
+                      height: MediaQuery.of(context).size.height / 12 - 6,
                       width: MediaQuery.of(context).size.width,
                       color: Color.fromARGB(255, 40, 40, 40),
                       child: Row(
@@ -51,7 +51,7 @@ class _BodyHomeState extends State<BodyHome> {
                             decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(
-                                      "assets/image/playlist_icon_2.png"),
+                                      "assets/image/play_music_bar.png"),
                                   fit: BoxFit.fitHeight),
                             ),
                           ),
@@ -64,7 +64,7 @@ class _BodyHomeState extends State<BodyHome> {
                               children: [
                                 Container(
                                   child: Text(
-                                    "Girls Like You(feat. Cardi B)",
+                                    "Love Poem",
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                         color: Colors.white,
@@ -73,7 +73,7 @@ class _BodyHomeState extends State<BodyHome> {
                                   ),
                                 ),
                                 Container(
-                                  child: Text("Maroon 5",
+                                  child: Text("IU",
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           color: Colors.grey,
@@ -109,7 +109,7 @@ class _BodyHomeState extends State<BodyHome> {
                       color: Colors.transparent,
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height / 12 - 1,
+                      height: MediaQuery.of(context).size.height / 12 - 6,
                       child: BottomNavigationBar(
                         backgroundColor: Color.fromARGB(255, 40, 40, 40),
                         currentIndex: index,
