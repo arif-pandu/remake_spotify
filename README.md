@@ -1,3 +1,4 @@
+
 # remake_spotify
 
 A new Flutter project.
@@ -18,3 +19,5 @@ FREE TO USE
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+![fix spotify 1_google-pixel4xl-justblack-portrait](https://user-images.githubusercontent.com/54800191/120929549-ad41aa80-c713-11eb-980a-0a4d940c3b62.png)
